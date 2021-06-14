@@ -94,6 +94,7 @@
         android:layout_below="@id/head_cardView"
         android:layout_alignParentBottom="true"
         android:paddingBottom="@dimen/_50sdp"
+        app:stackFromEnd="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:background="@color/mild_white" />

@@ -50,14 +50,20 @@ public class StatsFragment extends Fragment implements OpenArticleListener {
         binding.purchaseBtn.setOnClickListener(v -> navController.navigate(R.id.action_statsFragment_to_purchaseFragment));
         binding.sellBtn.setOnClickListener(v -> navController.navigate(R.id.action_statsFragment_to_sellFragment));
        setUpHeader();
-       serUpRv();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        serUpRv();
     }
 
     private void serUpRv() {
         viewModel.getAllPeriodAndItems.observe(getViewLifecycleOwner(),v-> adapter.submitList(v));
         binding.mainRv.setAdapter(adapter);
         if(adapter.getCurrentList().size()>0)
-        binding.mainRv.smoothScrollToPosition(adapter.getCurrentList().size()-1);
+      binding.mainRv.smoothScrollToPosition(adapter.getCurrentList().size()-1);
 //        binding.mainRv.scrollToPosition(adapter.getCurrentList().size()-1);
     }
 

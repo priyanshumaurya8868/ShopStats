@@ -105,6 +105,7 @@
        tools:listitem="@layout/nested_rv_item"
        android:background="@color/mild_white"
        android:nestedScrollingEnabled="false"
+       app:stackFromEnd="true"
        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 </LinearLayout>
