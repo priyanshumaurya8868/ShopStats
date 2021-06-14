@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_4sdp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/purchase_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/lite_headline"
+                tools:text="21/23/12"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/purchaseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/purchase_date"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/lite_headline"
+                tools:text="12:34 PM" />
+            <TextView
+                android:id="@+id/purchase_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/_110sdp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_below="@id/purchase_date"
+                android:layout_alignParentStart="true"
+                tools:text="Pizza"/>
+
+            <TextView
+                android:id="@+id/purchaseQuantityAndUnits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/purchase_product_name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/lite_headline"
+                tools:text="1*1 Piece" />
+
+            <TextView
+                android:id="@+id/purchaseTotalAmount"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:layout_centerInParent="true"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/red"
+                tools:text="23500" />
+
+            <TextView
+                android:id="@+id/sellTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_10sdp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/green"
+                android:visibility="invisible"
+                tools:text="23500" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

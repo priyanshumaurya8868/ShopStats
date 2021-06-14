@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ShopStats</string>
+    <string name="entryFragArgs">isPurchased</string>
+    <string name="item_args">itemArgs</string>
+</resources>

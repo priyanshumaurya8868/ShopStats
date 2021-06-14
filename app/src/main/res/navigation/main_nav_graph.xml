@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/statsFragment">
+
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.priyanshumaurya8868.shopstats.ui.fragments.StatsFragment"
+        android:label="StatsFragment"
+        tools:layout="@layout/stats_fragment">
+
+        <action
+            android:id="@+id/action_statsFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_statsFragment_to_sellFragment"
+            app:destination="@id/sellFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_statsFragment_to_updateFragment"
+            app:destination="@id/updateFragment"
+            app:popUpToInclusive="true">
+            <argument
+                android:name="@string/item_args"
+                app:argType="com.priyanshumaurya8868.shopstats.room.entities.Item"
+                />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.priyanshumaurya8868.shopstats.ui.fragments.EntryForm"
+        android:label="Purchase"
+        tools:layout="@layout/entry_form">
+        <argument
+            android:name="@string/entryFragArgs"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sellFragment"
+        android:name="com.priyanshumaurya8868.shopstats.ui.fragments.EntryForm"
+        android:label="Sell"
+        tools:layout="@layout/entry_form">
+        <argument
+            android:name="@string/entryFragArgs"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.priyanshumaurya8868.shopstats.ui.fragments.EntryForm"
+        android:label="Update Record"
+        tools:layout="@layout/entry_form">
+    </fragment>
+</navigation>
